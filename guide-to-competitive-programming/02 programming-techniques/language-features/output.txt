@@ -1,0 +1,12 @@
+freopen
+FILE * freopen ( const char * filename, const char * mode, FILE * stream );
+Reopen stream with different file or mode
+Reuses stream to either open the file specified by filename or to change its access mode.
+
+If a new filename is specified, the function first attempts to close any file already associated with stream (third parameter) and disassociates it. Then, independently of whether that stream was successfuly closed or not, freopen opens the file specified by filename and associates it with the stream just as fopen would do using the specified mode.
+
+If filename is a null pointer, the function attempts to change the mode of the stream. Although a particular library implementation is allowed to restrict the changes permitted, and under which circumstances.
+
+The error indicator and eof indicator are automatically cleared (as if clearerr was called).
+
+This function is especially useful for redirecting predefined streams like stdin, stdout and stderr to specific files (see the example below).
