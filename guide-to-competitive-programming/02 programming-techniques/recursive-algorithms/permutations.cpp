@@ -36,9 +36,32 @@ void search(){
     }
 }
 
+// const size = 3;
+vector<int> p;
+bool seen[4];
+void perm(int pos, int size){
+    if(pos == size + 1){
+        // process permutation
+        print(p);
+    }else{
+        for(int i = 1; i <= size; i++){
+            if(seen[i]) continue;
+            seen[i] = true;
+            p.push_back(i);
+            perm(pos+1, size);
+            seen[i] = false;
+            p.pop_back();
+        }   
+    }
+}
+
 int main(){
 
     search();
+    
+    cout << endl;
+    //smilary...
+    perm(1, 3);
     
     cout << "\n";
     // Note that the C++ standard library also has the function next_permutation
