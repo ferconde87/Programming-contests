@@ -15,10 +15,6 @@ void printBits(int num){
 	cout << endl;	
 }
 
-// bool getBitLL(long long num, int i){
-// 	return ((num & (1 << i)) != 0);
-// }
-
 void printBitsLL(long long num){
 	for(int i = 63; i >= 0; i--){
 		cout << ((num & (1LL << i)) != 0);
@@ -46,9 +42,6 @@ int clearBitsIThrought0(int num, int i){
 	int mask = -1 << (i + 1);
 	return num &  mask;
 }
-
-
-
 
 
 bool isDivisibleByPower2OfK(int x, int k) {
