@@ -23,7 +23,8 @@ void bubbleSort(){
             if(a[j] > a[j+1])
                 swap(a[j], a[j+1]);
 }
-
+///////////////////////////////////////////////////////////////////////////////////////
+// Pruebas
 void swapIfItIsSmaller(){
     print();
     for(int i = 0; i < N; i++)
@@ -33,7 +34,6 @@ void swapIfItIsSmaller(){
     print();
 }
 
-
 void swapIfItIsGreater(){
     print();
     for(int i = 0; i < N; i++)
@@ -42,7 +42,7 @@ void swapIfItIsGreater(){
                 swap(a[i], a[j]);
     print();
 }
-
+///////////////////////////////////////////////////////////////////////////////////////
 
 int main(){
 
