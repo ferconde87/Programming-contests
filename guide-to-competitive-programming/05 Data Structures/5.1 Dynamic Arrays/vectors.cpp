@@ -2,6 +2,8 @@
 
 using namespace std;
 
+#define imprimir(v) for (auto x : v) cout << x << " "; cout << "\n";
+
 void print(vector<int> &v){
     for (auto x : v) cout << x << " "; cout << "\n";
 }
@@ -58,13 +60,34 @@ int main(){
     auto exampleNotFound = upper_bound(v.begin(), v.end(), 8);
     if(exampleNotFound == v.end()) cout << "Element larger than 8 not found in v" << "\n\n";
 
-    //3. Other Structures
     // The C++ standard library contains a large number of useful functions that are
     // worth exploring. For example, the following code creates a vector that contains the
     // unique elements of the original vector in a sorted order:
     v = {4,3,4,5,2,1,4,5,6,7,5,3,2,1,1,2,3,4,4,5,6,3,10,-4};    print(v);
     sort(v.begin(),v.end());                                    print(v);
     v.erase(unique(v.begin(),v.end()),v.end());                 print(v);
+    
+    //3. Other Structures
+    deque<int> d;
+    d.push_back(5); // [5]
+    d.push_back(2); // [5,2]
+    d.push_front(3); // [3,5,2]
+    d.pop_back(); // [3,5]
+    d.pop_front(); // [5]
+
+    stack<int> s;
+    s.push(2); // [2]
+    s.push(5); // [2,5]
+    cout << s.top() << "\n"; // 5
+    s.pop(); // [2]
+    cout << s.top() << "\n"; // 2
+
+    queue<int> q;
+    q.push(2); // [2]
+    q.push(5); // [2,5]
+    cout << q.front() << "\n"; // 2
+    q.pop(); // [5]
+    cout << q.back() << "\n"; // 5
 
     return 0;
 }
