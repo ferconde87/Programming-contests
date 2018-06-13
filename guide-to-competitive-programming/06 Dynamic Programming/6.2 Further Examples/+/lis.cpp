@@ -3,8 +3,7 @@
 using namespace std;
 
 //O(N LOG N) solution from codeforces: http://codeforces.com/blog/entry/13225
-// No pasa todos los test WA Case 9 
-// en http://www.spoj.com/problems/ELIS/ u.u
+//Assuming Longest NON_STRICTLY increasing SECUENCY
 int  solve_n_log_n(int *a, int n){ 
     multiset < int > s;
     multiset < int > :: iterator it;
