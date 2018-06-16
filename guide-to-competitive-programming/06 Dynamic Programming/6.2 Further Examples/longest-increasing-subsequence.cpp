@@ -41,17 +41,6 @@ int  solve_non_strict_n_log_n(int *a, int n){
     return s.size();
 }
 
-int solve4(int *a, int n){
-    set<int> s;
-    for(int i = 0; i < n; i++){
-        if(s.find(a[i])==s.end()){
-            s.insert(a[i]);
-            auto it = s.upper_bound(a[i]);
-            if(it != s.end()) s.erase(it);
-        } 
-    }
-    return s.size();
-}
 
 
 
@@ -74,12 +63,44 @@ int solve3(int *a, int n){
     return lis;
 }
 
+//O(N log N)
+int solve4(int *a, int n){
+    set<int> s;
+    for(int i = 0; i < n; i++){
+        if(s.find(a[i])==s.end()){
+            s.insert(a[i]);
+            auto it = s.upper_bound(a[i]);
+            if(it != s.end()) s.erase(it);
+        } 
+    }
+    return s.size();
+}
+
+//O(N log N) +eficiente. Una sola operación O(log N) por iteración
+int solve5(int *a, int n){
+    set<int> s;
+    for(int i = 0; i < n; i++){
+        auto it = s.insert(a[i]);
+        if(it.second && ++it.first!=s.end()) s.erase(it.first);
+    }
+    return s.size();
+}
+
+int solve6(int *a, int n){
+    set<int> s;
+    int i = 0;
+    for(auto it = s.insert(a[i]); i < n; i++)
+        if(it.second && ++it.first!=s.end()) s.erase(it.first);
+    return s.size();
+}
 
 int main(){
     cout << solve(a, 8) << endl;
     cout << solve_non_strict_n_log_n(a, 8) << endl;
     cout << solve3(a, 8) << endl;
     cout << solve4(a, 8) << endl;
+    cout << solve5(a, 8) << endl;
+    cout << solve5(a, 8) << endl;
     cout << endl;
 
     int b[7] = {3, 1, 2, 0, 5, 4, 10};
@@ -87,18 +108,24 @@ int main(){
     cout << solve_non_strict_n_log_n(b,7) << endl;
     cout << solve3(b,7) << endl;
     cout << solve4(b,7) << endl;
+    cout << solve5(b,7) << endl;
+    cout << solve6(b,7) << endl;
     cout << endl;
     int c[5] = {1, 4, 2, 4, 3};
     cout << solve(c, 5) << endl;
     cout << solve_non_strict_n_log_n(c, 5) << endl;
     cout << solve3(c, 5) << endl;
     cout << solve4(c, 5) << endl;
+    cout << solve5(c, 5) << endl;
+    cout << solve6(c, 5) << endl;
     cout << endl;
     int d[13] = {3, 2, 5, 7, 1, 8, 6, 7, 8, 2, 6, 9, 6};
     cout << solve(d, 13) << endl;
     cout << solve_non_strict_n_log_n(d, 13) << endl;
     cout << solve3(d, 13) << endl;
     cout << solve4(d, 13) << endl;
+    cout << solve5(d, 13) << endl;
+    cout << solve6(d, 13) << endl;
     cout << endl;
 
     int e[15] = {3, 2, 5, 7, 1, 8, 6, 7, 8, 2, 6, 9, 6, 6, 6};
@@ -106,6 +133,8 @@ int main(){
     cout << solve_non_strict_n_log_n(e, 15) << endl;// 7 => (!) No estrictamente creciente
     cout << solve3(e, 15) << endl;
     cout << solve4(e,15) << endl;
+    cout << solve5(e,15) << endl;
+    cout << solve6(e,15) << endl;
 
     return 0;
 }
