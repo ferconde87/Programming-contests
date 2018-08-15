@@ -1,0 +1,29 @@
+4
+1
+Buenos Aires
+Buenos Aires
+10
+3
+Cusco
+Rio de Janeiro
+Viedma
+Cusco
+Rio de Janeiro
+Viedma
+0
+100
+10000000
+2
+Buenos Aires
+Rio de Janeiro
+Rosario
+Recife
+50
+61
+2
+Viedma
+Lima
+Cusco
+Belo Horizonte
+30
+610

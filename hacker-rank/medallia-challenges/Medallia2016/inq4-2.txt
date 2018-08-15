@@ -1,0 +1,5 @@
+dormitory
+3
+dirty room
+dirtyroom
+room is dirty
