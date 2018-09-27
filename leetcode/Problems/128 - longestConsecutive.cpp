@@ -1,4 +1,4 @@
- #include <bits/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -35,4 +35,9 @@ int longestConsecutive(vector<int>& nums) {
     }
     
     return ans;
+}
+
+int main(){
+
+    return 0;
 }
