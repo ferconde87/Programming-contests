@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//Time complexity : O(mn)O(mn)
+//Time complexity : O(mn)
 //Space complexity : O(1)
 
 //Definition for singly-linked list.
