@@ -32,7 +32,6 @@ int majorityElement2(vector<int> &num) {
             count = 1;
         }
     }
-
     return num[majorityIndex];
 }
 
