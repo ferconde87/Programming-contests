@@ -3,7 +3,6 @@
 using namespace std;
 
 //Time complexity: O(N)
-
 //Space complexity: O(N)
 
 int majorityElement(const vector<int> &A) {
