@@ -2,7 +2,9 @@
 
 using namespace std;
 
-// Definition for binary tree
+// Time Complexity O(N)
+// Space Complexity O(N)
+
 struct TreeNode {
     int val;
     TreeNode *left;
