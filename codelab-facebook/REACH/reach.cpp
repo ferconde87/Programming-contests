@@ -7,7 +7,7 @@ using namespace std;
 
 int coverPoints(vector<int> &X, vector<int> &Y) {
     int n = X.size();
-    if(n != Y.size()) return -1;
+    assert(X.size() == Y.size());
     int result = 0;
     for(int i = 0; i < n - 1; ++i){
         result += max(abs(X[i]-X[i+1]), abs(Y[i]-Y[i+1]));
