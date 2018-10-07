@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int Solution::diffPossible(const vector<int> &A, int B) {
+int diffPossible(const vector<int> &A, int B) {
     unordered_set<int> hashSet;
     for(int x : A){
         if(hashSet.find(x + B) != hashSet.end() || hashSet.find(x - B) != hashSet.end()){
