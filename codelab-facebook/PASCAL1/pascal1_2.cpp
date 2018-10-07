@@ -4,8 +4,7 @@ using namespace std;
 
 vector<vector<int> > generate(int A) {
     if(A == 0) return {};
-    vector<vector<int> > result;
-    result.push_back({1});
+    vector<vector<int> > result({{1}});
     for(int i = 1; i < A; i++){
         vector<int> row({1});
         for(int j = 1; j < i; j++){
