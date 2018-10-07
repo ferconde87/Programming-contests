@@ -63,6 +63,7 @@ string searchShortestUniquePrefix(struct TrieNode *root, string key)
   
     return key;
 } 
+
 // Returns true if key presents in trie, else 
 // false 
 bool search(struct TrieNode *root, string key) 
