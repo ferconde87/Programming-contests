@@ -40,7 +40,7 @@ int searchRightSide(const vector<int> &A, int B, int l, int r){
     }
 }
 
-vector<int> Solution::searchRange(const vector<int> &A, int B) {
+vector<int> searchRange(const vector<int> &A, int B) {
     int left = searchLeftSide(A, B, 0, A.size());
     int right = searchRightSide(A, B, 0, A.size());
     return {left, right};
