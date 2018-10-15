@@ -7,17 +7,22 @@ using namespace std;
 
 int lengthOfLastWord(const string &A) {
     int result = 0;
-    for(int i = A.size()-1; i >= 0; --i){
+    int cur = 0;
+    for(int i = 0; i < A.size(); i++){
         if(A[i] == ' '){
-            if(result > 0){
-                break;
+            if(cur > 0){
+                result = cur;
+                cur = 0;
             }
         }else{
-            result++;
+            cur++;
         }
     }
+    if(cur > 0) result = cur;
+    
     return result;
 }
+
 
 
 int main(){
