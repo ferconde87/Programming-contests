@@ -1,5 +1,6 @@
 
-int result_g = INT_MAX;
+//I did two BFS one from beginWord other from endWord hoping to find the solution quickly that one BFS from beginWord (but nope)
+//But I didn't optimize the second BFS (starting from endWord)
 
 class Solution {
 public:
