@@ -1,0 +1,10 @@
+1
+6 8
+a b 3
+u w 3
+v c 2 
+a c 5
+c b 3
+c w 6
+c u 2
+u w 4
